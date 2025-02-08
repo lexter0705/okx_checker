@@ -13,7 +13,6 @@ class OkxConnect(BaseConnect):
         self.__redis_connect = redis_connect
         link = "wss://ws.okx.com/ws/v5/public"
         super().__init__(link)
-        print(pair)
 
     async def on_close(self):
         logging.warning(f"WARNING {self.__pair} connection is closed!!!")
